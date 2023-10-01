@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { BsPinFill } from "react-icons/bs";
+import { MdDelete } from "react-icons/md";
 
 
 import { Appcontext } from "../context/contextuser";
@@ -69,7 +70,7 @@ function Note() {
                                         onClick={() => handlepin(note.id)} 
                                         />
                                 </div>
-                                <img className="delete-icon" src="src\components\pngg\delete2.png" alt="del-icon"
+                                <MdDelete className="delete-icon" 
                                     onClick={() => Confirmation(note.id)} 
                                     />
                                 {showconfirmation &&
