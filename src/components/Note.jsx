@@ -63,11 +63,11 @@ function Note() {
 
                             <div className="icon">
                                 <div className={`pin-icon ${note.pinned ? 'pin-icon-selected' : ''}`}>
-                                    <img className="pin-icon-f" src="src/components/png's/pin.png" alt="pin-icon"
+                                    <img className="pin-icon-f" src="src/components/pngg/pin.png" alt="pin-icon"
                                         onClick={() => handlepin(note.id)} 
                                         />
                                 </div>
-                                <img className="delete-icon" src="src\components\png's\delete2.png" alt="del-icon"
+                                <img className="delete-icon" src="src\components\pngg\delete2.png" alt="del-icon"
                                     onClick={() => Confirmation(note.id)} 
                                     />
                                 {showconfirmation &&
