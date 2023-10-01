@@ -1,4 +1,6 @@
 import { useContext, useState } from "react";
+import { BsPinFill } from "react-icons/bs";
+
 
 import { Appcontext } from "../context/contextuser";
 import { ConfirmationPopup } from "./Popup";
@@ -63,7 +65,7 @@ function Note() {
 
                             <div className="icon">
                                 <div className={`pin-icon ${note.pinned ? 'pin-icon-selected' : ''}`}>
-                                    <img className="pin-icon-f" src="src/components/pngg/pin.png" alt="pin-icon"
+                                    <BsPinFill className="pin-icon-f" 
                                         onClick={() => handlepin(note.id)} 
                                         />
                                 </div>
