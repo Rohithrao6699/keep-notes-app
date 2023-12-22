@@ -13,15 +13,14 @@ function Note() {
 
             const [showconfirmation, setShowconfirmation] = useState(false)
             // this is for popup of delete icon
-            const Confirmation = (id) => {
-                setShowconfirmation(true)
-            } 
+            
                 const onCancel = () => {
                     setShowconfirmation(false)
                 }
                
-                const onDelete = (id) => {
-                    deleteNote(id)
+                const onDelete = (notetoDelete) => {
+                    const idofNote = notetoDelete.id
+                    deleteNote(idofNote)
                     setShowconfirmation(false)
                 }
 
@@ -71,12 +70,13 @@ function Note() {
                                         />
                                 </div>
                                 <MdDelete className="delete-icon" 
-                                    onClick={() => Confirmation(note.id)} 
+                                    onClick={() => setShowconfirmation(true)} 
                                     />
                                 {showconfirmation &&
                                     <ConfirmationPopup showconfirmation={showconfirmation}
                                         onCancel={onCancel}
-                                        onDelete={() => onDelete(note.id)}
+                                        onDelete={() => onDelete(note)}
+                                        note={note}
                                          />}
                             </div>
                         </div> 
